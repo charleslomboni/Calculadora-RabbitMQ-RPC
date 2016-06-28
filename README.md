@@ -5,7 +5,9 @@ Exemplo de calculadora de operações básicas como:
 - Adição, subtração, multiplicação e divisão, usando webapi e rabbitmq com rpc.
 
 
-PS .: Exemplo precisa ser refatorado, código de exemplo apenas para estudo! :smile:
+**PS¹ .: Exemplo precisa ser refatorado, código de exemplo apenas para estudo!** :smile:
+
+**PS² .: Caso não saiba mexer com o RabbitMQ, aqui tem um [EXEMPLO](https://github.com/charleslomboni/Exemplos-RabbitMQ) bem explicativo que fiz!** :blush:
 
 
 ### Chamando a API
