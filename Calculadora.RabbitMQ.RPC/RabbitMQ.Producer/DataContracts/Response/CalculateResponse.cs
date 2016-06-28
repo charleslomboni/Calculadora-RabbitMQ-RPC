@@ -1,4 +1,4 @@
-﻿namespace WebAPI.DataContracts.Response {
+﻿namespace RabbitMQ.Producer.DataContracts.Response {
 
     public class CalculateResponse {
 
@@ -7,6 +7,7 @@
 
         // Resultado do cálculo
         public int Result { get; set; }
+
         public string Error { get; set; }
     }
 }

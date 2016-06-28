@@ -2,7 +2,7 @@
 
 namespace RabbitMQ.Consumer {
 
-    internal class Consumer {
+    internal class RPCServer {
 
         private static void Main(string[] args) {
             Receive.Consumer();

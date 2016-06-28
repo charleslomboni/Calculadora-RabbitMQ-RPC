@@ -1,6 +1,6 @@
-﻿using System.Web.Http;
-using WebAPI.DataContracts.Request;
-using WebAPI.Queue;
+﻿using RabbitMQ.Producer.DataContracts.Request;
+using System.Threading.Tasks;
+using System.Web.Http;
 
 namespace WebAPI.Controllers {
 
@@ -12,7 +12,7 @@ namespace WebAPI.Controllers {
 
         [HttpPost]
         [Route("Calculate")]
-        public IHttpActionResult Calculate([FromBody]CalculateRequest calculateRequest) {
+        public async Task<IHttpActionResult> Calculate([FromBody]CalculateRequest calculateRequest) {
             // Pego a informação do request
             // Envio para a fila
             // Espero o cálculo do consumer
@@ -23,7 +23,8 @@ namespace WebAPI.Controllers {
                 return BadRequest("The are invalid parameters.");
             }
 
-            var result = QueueManager.SendToQueue(calculateRequest);
+            var result = await new RabbitMQ.Producer.RPCCLient().SendToQueue(calculateRequest);
+            //new QueueManager().ResetEvent();
 
             return Ok(result);
         }

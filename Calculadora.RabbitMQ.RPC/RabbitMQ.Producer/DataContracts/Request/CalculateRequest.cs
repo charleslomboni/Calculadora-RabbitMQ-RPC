@@ -1,4 +1,4 @@
-﻿namespace WebAPI.DataContracts.Request {
+﻿namespace RabbitMQ.Producer.DataContracts.Request {
 
     public class CalculateRequest {
 

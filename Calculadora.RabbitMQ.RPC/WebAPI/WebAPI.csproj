@@ -193,9 +193,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Queue\QueueManager.cs" />
-    <Compile Include="DataContracts\Request\CalculateRequest.cs" />
-    <Compile Include="DataContracts\Response\CalculateResponse.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -234,6 +231,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RabbitMQ.Producer\RabbitMQ.Producer.csproj">
+      <Project>{efb5ebf1-473a-4720-ace9-28647d85546b}</Project>
+      <Name>RabbitMQ.Producer</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
