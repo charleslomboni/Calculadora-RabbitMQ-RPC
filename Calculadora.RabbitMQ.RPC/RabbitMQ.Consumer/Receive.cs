@@ -124,7 +124,7 @@ namespace RabbitMQ.Consumer {
 
         private static void ValidateHeader(IDictionary<string, object> header, ref int valorX, ref int valorY) {
             foreach (KeyValuePair<string, object> item in header) {
-                Console.WriteLine("Item.Value: {0} - Item.Key: {1}", item.Value, item.Key);
+                Console.WriteLine("Item.Key: {0} - Item.Value: {1}", item.Key, item.Value);
                 valorX = Convert.ToInt32(item.Key);
                 valorY = Convert.ToInt32(item.Value);
             }

@@ -60,7 +60,16 @@ namespace WebAPI.DataContracts.Queue {
                         var ea = consumer.Queue.Dequeue();
                         // Se a fila (com GUID) que criei, for igual a que o consumer respondeu
                         if (ea.BasicProperties.ReplyTo == replyToQueueName) {
-                            result.Result = Convert.ToInt32(Encoding.UTF8.GetString(ea.Body));
+
+                            // Msg de retorno
+                            var eaBody = Encoding.UTF8.GetString(ea.Body);
+
+                            // Se deu algum erro no Cálculo
+                            if (eaBody.ToLower().Contains("wrong")) {
+                                result.Error = eaBody;
+                            } else {
+                                result.Result = Convert.ToInt32(eaBody);
+                            }
                             return result;
                         }
                     }

@@ -7,5 +7,6 @@
 
         // Resultado do cálculo
         public int Result { get; set; }
+        public string Error { get; set; }
     }
 }
