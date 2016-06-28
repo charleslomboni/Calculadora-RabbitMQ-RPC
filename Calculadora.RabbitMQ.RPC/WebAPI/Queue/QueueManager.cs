@@ -1,11 +1,11 @@
-﻿using RabbitMQ.Client;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using RabbitMQ.Client;
 using WebAPI.DataContracts.Request;
 using WebAPI.DataContracts.Response;
 
-namespace WebAPI.DataContracts.Queue {
+namespace WebAPI.Queue {
 
     public static class QueueManager {
 

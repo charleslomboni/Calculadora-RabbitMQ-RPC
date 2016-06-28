@@ -1,6 +1,6 @@
 ﻿using System.Web.Http;
-using WebAPI.DataContracts.Queue;
 using WebAPI.DataContracts.Request;
+using WebAPI.Queue;
 
 namespace WebAPI.Controllers {
 
