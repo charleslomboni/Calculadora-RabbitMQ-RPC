@@ -1,5 +1,7 @@
 # Calculadora-RabbitMQ-RPC
 
+<strong>Master branch</strong><br />
+[![Build status](https://ci.appveyor.com/api/projects/status/k8se4np19v25sme7/branch/master?svg=true)](https://ci.appveyor.com/project/charleslomboni/calculadora-rabbitmq-rpc/branch/master)
 
 Exemplo de calculadora de operações básicas como: 
 - Adição, subtração, multiplicação e divisão, usando webapi e rabbitmq com rpc.
